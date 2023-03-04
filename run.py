@@ -82,7 +82,6 @@ def logo():
 	jalan ('\x1b[1;97m⠄⠄⠄⠄⠈⠻⣿⣿⣿⣿⣹⣿⣿⣿⡇⣿⣿⡿ ⣾⣿⣿ ⣾⣿⣷ ⣿')
 	jalan ('\x1b[1;97m⠄⠄⣀⣴⣾⣶⡞⣿⣿⣿⣿⣿⣿⣿⣾⣿⡿⠃ ⣿   ⣿ ⣿ ⣿')
 	jalan ('\x1b[1;97m⣠⣾⣿⣿⣿⣿⣿⣹⣿⣿⣿⣿⣿⡟⣹⣿⣳⡄ ⢿⣿⣿ ⢿⣿⡿ ⢿⣿⣿')
-	jalan ('\x1b[1;92mC O L M E X S')
 
 def banner():                
 	os.system('clear')
