@@ -99,6 +99,7 @@ def banner():
 def login():
 	try:
 		ses = requests.Session()
+		logo()
 		kukis = input(f'\n{P} Masukan cookie anda :{K} ')
 		url_tokB = ses.get('https://www.facebook.com/adsmanager/manage/campaigns',cookies = {"cookie":kukis})
 		ids_tokB = re.search("act=(.*?)&nav_source", url_tokB.text).group(1)
@@ -142,7 +143,7 @@ def menu():
 			os.system('rm -rf data/cookie.txt && rm -rf data/token.txt')
 			exit(f'{M} ! cookie invalid')
 	except (FileNotFoundError,KeyError,IOError):
-		print (f"{M} ! cookie invalid");jeda(2)
+		print (f"{M}cookie invalid");jeda(2)
 		login()
 	except requests.exceptions.ConnectionError:
 		exit(f"{M} ! tidak ada koneksi")
