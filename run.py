@@ -143,7 +143,7 @@ def menu():
 			os.system('rm -rf data/cookie.txt && rm -rf data/token.txt')
 			exit(f'{M} ! cookie invalid')
 	except (FileNotFoundError,KeyError,IOError):
-		print (f"{M}cookie invalid");jeda(2)
+#		print (f"{M}cookie invalid");jeda(2)
 		login()
 	except requests.exceptions.ConnectionError:
 		exit(f"{M} ! tidak ada koneksi")
