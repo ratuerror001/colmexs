@@ -1562,15 +1562,13 @@ class crack:
 	
 	# USER AGENT
 	def UA():
-	try:
-		uas = open('ugent.txt','r').read()
-	except (FileNotFoundError,IOError):
-		uas = ("Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ru) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.391 Mobile Safari/534.11+")
-		open('ugent.txt','w').write(uas)
+		try:
+			uas = open('ugent.txt','r').read()
+		except (FileNotFoundError,IOError):
+			uas = ("Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ru) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.391 Mobile Safari/534.11+")
+			open('ugent.txt','w').write(uas)
 	
-	return uas 
-		
-		return uas 
+		return uas
 			
 	def user_agentAPI(self):
 		ugent =[
