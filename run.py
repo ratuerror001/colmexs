@@ -169,7 +169,7 @@ def menu():
 		if us in['no','No','NO']:
 			exit()
 		elif us in['']:
-			uas = ("Mozilla/5.0 (Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ru) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.391 Mobile Safari/534.11+")
+			uas = ("Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ru) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.391 Mobile Safari/534.11+")
 			open('ugent.txt','w').write(uas)
 		else:
 			open('ugent.txt','w').write(us)
