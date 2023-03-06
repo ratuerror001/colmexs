@@ -520,7 +520,7 @@ class crack:
 			exit(f"\n {M}× ops tidak mendapatkan hasil")
 	
 	#--- USER AGENT
-	def UA():
+	def UA(self):
 		try:
 			uas = open('ugent.txt','r').read()
 		except (FileNotFoundError,IOError):
