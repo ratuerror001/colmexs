@@ -162,7 +162,7 @@ def menu():
 	elif romz in ['6']:
 		hasil()
 	elif romz in ['7']:
-		UA(self)
+		UA()
 		uas = open('ugent.txt','r').read()
 		print (f"{P} ! User-Agent saat ini: {U}{uas}")
 		print (f"{P} ! jika tidak mau ingin mengganti User-Agent ketik {H}no{P} ")
@@ -520,7 +520,7 @@ class crack:
 			exit(f"\n {M}× ops tidak mendapatkan hasil")
 	
 	#--- USER AGENT
-	def UA(self):
+	def UA():
 		try:
 			uas = open('ugent.txt','r').read()
 		except (FileNotFoundError,IOError):
