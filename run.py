@@ -153,7 +153,7 @@ def menu():
 	elif romz in ['2']:
 		massal(token,coki)
 	elif romz in ['3']:
-		v_name(self,data_,jum)
+		nama()
 	elif romz in ['4']:
 		hasil()
 	elif romz in ['5']:
@@ -247,7 +247,7 @@ def massal(token,cookie):
 	return crack().__xnx__(id)
 	     
 # CRACK PENCARIAN NAMA
-def pencarian nama():
+def nama():
 		try:
 			true=False
 			rees = self.roomz.get(data_,cookies=self.romz_xyz(open("data/cookie.txt","r").read().strip())).text
