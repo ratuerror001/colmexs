@@ -247,58 +247,6 @@ def massal(token,cookie):
 	return crack().__xnx__(id)
 	     
 # CRACK PENCARIAN NAMA
-def nama():
-		try:
-			true=False
-			rees = self.roomz.get(data_,cookies=self.romz_xyz(open("data/cookie.txt","r").read().strip())).text
-			ox = re.findall('picture" \/>\<\/a\>\<\/td\>\<td\ class\=\"(.*?)\"\>\<a\ href\=\"\/(.*?)"\>\<div\ class\=\"..\"\>\<div\ class\=\"..\"\>(.*?)<\/div>',rees)
-			for i in ox:
-				if "profile.php?" in i[1]:
-					self.id.append(re.findall("id=(.*?)&amp;refid",i[1])[0]+"<=>"+i[2])
-				else:
-					self.id.append(re.findall("(.*?)\?refid=",i[1])[0]+"<=>"+i[2])
-				sys.stdout.write(f'\r{p}╰─{o} mengumpulkan ID{m} >{h} {len(self.id)} '),sys.stdout.flush();jeda(0.0050)
-				if len(self.id)==jum:
-					true=True
-					break
-			if true==False:
-				if "Lihat Hasil Selanjutnya" in rees:
-					self.search_name(parser(rees,"html.parser").find("a",string="Lihat Hasil Selanjutnya").get("href"),jum)
-		except:
-			pass
-		print("")
-		if len(self.id)!=0:
-			return crc().romiy(self.id)
-		else:
-			exit('%s╰─%s gagal mengambil id'%(p,m))
-	
-	def search_name(self,url,jum):
-		try:
-			data = parser(self.roomz.get(str(url)).text,'html.parser')
-			for z in data.find_all("td"):
-				tampung = re.findall('\<a\ href\=\"\/(.*?)\">\<div\ class\=\".*?\">\<div\ class\=\".*?\">(.*?)<\/div\>',str(z))
-				for uid,name in tampung:
-					if "profile.php?" in uid:
-						uid = re.findall("id=(.*)",str(uid))[0]
-					elif "<span" in name:
-						name = re.findall("(.*?)\<",str(name))[0]
-					if uid+"<=>"+name in id:
-						pass
-					else:
-						self.id.append(uid+"<=>"+name)
-					if len(self.id)==jum:
-						break 
-					sys.stdout.write(f'\r{p}╰─{o} mengumpulkan ID{m} >{h} {len(self.id)} '),sys.stdout.flush();jeda(0.0050)
-			for x in data.find_all("a",href=True):
-				if "Lihat Hasil Selanjutnya" in x.text:
-					search_name(x.get("href"),jum)
-		except:
-			pass 
-		print("")
-		if len(self.id)!=0:
-			return crc().romiy(self.id)
-		else:
-			exit('%s╰─%s gagal mengambil id'%(p,m))
 # CRACK JUMLAH FOLLOWER
 # CRACK ANGGOTA GROUP
 	       
