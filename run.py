@@ -247,7 +247,7 @@ def massal(token,cookie):
 	return crack().__xnx__(id)
 	     
 # CRACK PENCARIAN NAMA
-def v_name(self,data_,jum):
+def pencarian nama():
 		try:
 			true=False
 			rees = self.roomz.get(data_,cookies=self.romz_xyz(open("data/cookie.txt","r").read().strip())).text
