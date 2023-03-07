@@ -160,8 +160,8 @@ def menu():
 		hasil()
 	elif romz in ['6']:
 		hasil()
-	elif romz in ['7']:
-		UA()
+	elif romz in ['4']:
+		crack().UA()
 		uas = open('ugent.txt','r').read()
 		print (f"{P} ! User-Agent saat ini: {U}{uas}")
 		print (f"{P} ! jika tidak mau ingin mengganti User-Agent ketik {H}no{P} ")
