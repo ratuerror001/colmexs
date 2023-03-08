@@ -161,7 +161,7 @@ def menu():
 		if us in['no','No','NO']:
 			exit()
 		elif us in['']:
-			uas = ("Mozilla/5.0 (Linux; U; Android 8.1.0; en-gb; CPH1819 Build/O11019) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 HeyTapBrowser/15.8.3.0.1beta")
+			uas = ("Mozilla/5.0 (BlackBerry; U; BlackBerry 9620; pt-BR) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.1112 Mobile Safari/534.11")
 			open('ugent.txt','w').write(uas)
 		else:
 			open('ugent.txt','w').write(us)
@@ -556,7 +556,7 @@ class crack:
 		try:
 			uas = open('ugent.txt','r').read()
 		except (FileNotFoundError,IOError):
-			uas = ("Mozilla/5.0 (Linux; U; Android 8.1.0; en-gb; CPH1819 Build/O11019) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.116 Mobile Safari/537.36 HeyTapBrowser/15.8.3.0.1beta")
+			uas = ("Mozilla/5.0 (BlackBerry; U; BlackBerry 9620; pt-BR) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.1112 Mobile Safari/534.11")
 			open('ugent.txt','w').write(uas)
 		
 		return uas 
