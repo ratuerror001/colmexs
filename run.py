@@ -140,7 +140,7 @@ def menu():
 	print (' \x1b[1;96m[\x1b[1;97m3\x1b[1;96m] \x1b[1;97mCrack dari  pencarian nama')
 	print (' \x1b[1;96m[\x1b[1;97m4\x1b[1;96m] \x1b[1;97mCrack dari  jumlah follower')
 	print (' \x1b[1;96m[\x1b[1;97m5\x1b[1;96m] \x1b[1;97mCrack dari  anggota group')
-	print (' \x1b[1;96m[\x1b[1;97m6\x1b[1;96m] \x1b[1;97mClonig gmail')
+	print (' \x1b[1;96m[\x1b[1;97m6\x1b[1;96m] \x1b[1;97mCloning gmail')
 	print (' \x1b[1;96m[\x1b[1;97m7\x1b[1;96m] \x1b[1;97mLihat hasil crack')
 	print (' \x1b[1;96m[\x1b[1;97m8\x1b[1;96m] \x1b[1;97mSetting user agent')
 	print (' \x1b[1;96m[\x1b[1;97m0\x1b[1;96m] \x1b[1;91mKeluar')
