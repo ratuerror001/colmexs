@@ -151,9 +151,9 @@ def menu():
 	elif romz in ['2']:massal(token,coki)
 	elif romz in['3']:mail_name()
 	elif romz in['4']:follow(token,coki)
-	elif romz in['5']:exit()
-	elif romz in ['6']:hasil()
-	elif romz in ['7']:
+	elif romz in['5']:groups(self,data_)
+	elif romz in ['7']:hasil()
+	elif romz in ['8']:
 		crack().UA()
 		uas = open('ugent.txt','r').read()
 		print (f"{P} ! User-Agent saat ini: {U}{uas}")
