@@ -151,8 +151,8 @@ def menu():
 	elif romz in ['2']:massal(token,coki)
 	elif romz in['3']:mail_name()
 	elif romz in['4']:follow(token,coki)
-	elif romz in['5']:groups(self,data_)
-	elif romz in['6']:cloning_gmail(nama,jumlah)	
+	elif romz in['5']:groups(token,coki)
+	elif romz in['6']:cloning_gmail(token,coki)	
 	elif romz in ['7']:hasil()
 	elif romz in ['8']:
 		crack().UA()
@@ -285,7 +285,7 @@ def follow(token,cookie):
 	return crack().__xnx__(id)
 
 # CRACK GROUP
-def groups(self,data_):
+def groups(token,coki_):
 	try:
 		respon = self.roomz.get(data_, cookies=self.romz_xyz(open("data/cookie.txt","r").read().strip())).text
 		otw = re.findall('\<h3\>\<a\ class\=\"..\"\ href\=\"\/(.*?)\"\>(.*?)<\/a\>',respon)
@@ -328,7 +328,7 @@ def groups(self,data_):
 		exit('%s╰─%s gagal mengambil id'%(p,m))
 		
 # CLONIG GMAIL
-def cloning_gmail(nama,jumlah):
+def cloning_gmail(token,coki):
 	try:
 		rc = random.choice
 		rr = random.randint
