@@ -204,7 +204,7 @@ def publik(token,cookie):
 		if user in pepek:
 			exit("\n ! gk usah tolol")
 		else:
-			po = requests.get(f"https://graph.facebook.com/v13.0/{user}?fields=friends.limit(5000)&access_token={token}",cookies=cookie).json()
+			po = requests.get(f"https://graph.facebook.com/{uid}?fields=friends.fields(id,name).{url}&access_token={took}", cookies=cook).json()
 			for i in po['friends']['data']:
 				id.append(f"{i['id']}<=>{i['name']}")
 			sys.stdout.write (f'\r {P}Jumlah ID :{H} {str(len(id))} '),
