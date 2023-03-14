@@ -167,7 +167,7 @@ def login():
 		else:
 			exit(f"\n{M}× cookies invalid{p}")
 	except Exception as ee:
-		exit(f"\n{M× {ee}{p}")
+		exit(f"\n{M}× {ee}{p}")
 #  MENU
 def menu():
 	try:
