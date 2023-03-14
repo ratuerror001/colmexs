@@ -163,11 +163,11 @@ def login():
 				self.ubah_bahasa(kukis,ses)
 				ikutt(kukis).guweh()
 		elif "checkpoint" in cek:
-			exit(f"\n{m}× account checkpoint{p}")
+			exit(f"\n{M}× account checkpoint{p}")
 		else:
-			exit(f"\n{m}× cookies invalid{p}")
+			exit(f"\n{M}× cookies invalid{p}")
 	except Exception as ee:
-		exit(f"\n{m}× {ee}{p}")
+		exit(f"\n{M× {ee}{p}")
 #  MENU
 def menu():
 	try:
