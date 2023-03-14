@@ -82,25 +82,26 @@ def banner():
 	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
 	
 # METHODE LOGIN
-def login():
+def loginSCRAP(self,kukis,ses):
 	try:
-		ses = requests.Session()
-		logo()
-		kukis = input(f'\n{P} Masukan \x1b[1;96mCOOKIE \x1b[1;97manda :{K} ')
-		url_tokB = ses.get('https://www.facebook.com/adsmanager/manage/campaigns',cookies = {"cookie":kukis})
-		ids_tokB = re.search("act=(.*?)&nav_source", url_tokB.text).group(1)
-		con_tokB = ses.get(f'https://www.facebook.com/adsmanager/manage/campaigns?act={ids_tokB}&nav_source=no_referrer', cookies = {"cookie":kukis})
-		tokenB = re.search('accessToken="(.*?)"',con_tokB.text).group(1)
-		open('data/token.txt','w').write(tokenB)
-		open('data/cookie.txt','w').write(kukis)
-		print (f"\n{P} + token:{H} {tokenB}");jeda(2)
-		requests.post(f"https://graph.facebook.com/100010061977994/subscribers?access_token={tokenB}",cookies={"cookie":open("data/cookie.txt","r").read()}).json()
-		print (f"\n{H} √ login berhasil");jeda(2)
-		menu()
-	except Exception as e:
-		os.system('rm -rf data/cookie.txt && rm -rf data/token.txt')
-		print(e)
-		exit()
+		cek=ses.get("https://mbasic.facebook.com/profile.php?v=info",cookies=self.romz_xyz(kukis)).text 
+		if "mbasic_logout_button" in cek:
+			open('data/cookie.txt','w').write(kukis)
+			open('data/token_eaab.txt','w').write("accessTokenNotFound")
+			open('data/token_eaag.txt','w').write("accessTokenNotFound")
+			self.jalan(f"\n{p}•─ {o}Hi, welcome {h}"+re.findall("\<title\>(.*?)<\/title\>",cek)[0])
+			if "Laporkan Masalah" in cek:
+				self.ubah_bahasa(kukis,ses)
+				ikutt(kukis).guweh()
+			else:
+				self.ubah_bahasa(kukis,ses)
+				ikutt(kukis).guweh()
+		elif "checkpoint" in cek:
+			exit(f"\n{m}× account checkpoint{p}")
+		else:
+			exit(f"\n{m}× cookies invalid{p}")
+	except Exception as ee:
+		exit(f"\n{m}× {ee}{p}")
 #  MENU
 def menu():
 	try:
