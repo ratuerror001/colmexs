@@ -119,8 +119,9 @@ def menu():
 	except FileNotFoundError:
 		activate_licensi()
 	#folder()
-	os.system("clear")
 	try:
+		os.system("clear")
+		
 		token = open("data/token.txt","r").read()
 		coki = {"cookie":open("data/cookie.txt","r").read()}
 		try:
@@ -173,6 +174,9 @@ def menu():
 	else:
 		print ("\n ! isi yg benar")
 
+
+
+id =[]
 def activate_licensi():
 	os.system("clear")
 	logo()
