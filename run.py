@@ -82,7 +82,7 @@ def banner():
 	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
 	
 #--- LOGIN TOKEN
-def loginCOK(self,kukis,ses):
+def login():
 	try: 
 		# token EAAB
 		url_tokB = ses.get('https://www.facebook.com/adsmanager/manage/campaigns',cookies = {"cookie":kukis})
@@ -148,7 +148,7 @@ def ubah_bahasa(self,cookie,ses):
 		pass 
 			
 #--- LOGIN COOKIES 
-def loginSCRAP(self,kukis,ses):
+def login():
 	try:
 		cek=ses.get("https://mbasic.facebook.com/profile.php?v=info",cookies=self.romz_xyz(kukis)).text 
 		if "mbasic_logout_button" in cek:
