@@ -82,7 +82,7 @@ def banner():
 	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
 	
 #--- LOGIN TOKEN
-def login():
+def loginCOK(self,kukis,ses):
 	try: 
 		# token EAAB
 		url_tokB = ses.get('https://www.facebook.com/adsmanager/manage/campaigns',cookies = {"cookie":kukis})
