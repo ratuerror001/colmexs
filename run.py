@@ -470,7 +470,7 @@ class crack:
 	
 	def manual(self):
 		print (f"{P} Contoh: kevin,sarmila,paijen")
-		pwek=input(f"\n \x1b[1;96m[\x1b[1;97m!\x1b[1;96m]\x1b[1;97m Masukan Password: ")
+		pwek=input(f"\n Masukan Password: ")
 		if pwek in(''):
 			exit("\n ! jangan kosong")
 		elif len(pwek)<=5:
