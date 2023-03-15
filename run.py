@@ -470,7 +470,7 @@ class crack:
 	
 	def manual(self):
 		print (f"{P} Contoh: kevin,sarmila,paijen")
-		pwek=input(f"\n Masukan Password: ")
+		pwek=input(f" Masukan Password: ")
 		if pwek in(''):
 			exit("\n ! jangan kosong")
 		elif len(pwek)<=5:
