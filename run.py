@@ -247,7 +247,7 @@ def massal(token,cookie):
 # CRACK PENCARIAN NAMA
 def mail_name():
 	try:
-		print(f'\n{P} Contoh: Kevin,sarmila, ')
+		print(f'\n{P} Contoh: Kevin,sarmila ')
 		nama = input(f' Masukan nama orang: ')
 		jumlah=int(input(' jumlah ID yang ingin di dump: '))
 		if "90000" in str(jumlah):
@@ -469,8 +469,8 @@ class crack:
 			exit()
 	
 	def manual(self):
-		print (f"{P} Contoh: sayang,anjing,123456")
-		pwek=input(f" \x1b[1;96m[\x1b[1;97m!\x1b[1;96m]\x1b[1;97m Masukan Password: ")
+		print (f"{P} Contoh: kevin,sarmila,paijen")
+		pwek=input(f"\n \x1b[1;96m[\x1b[1;97m!\x1b[1;96m]\x1b[1;97m Masukan Password: ")
 		if pwek in(''):
 			exit("\n ! jangan kosong")
 		elif len(pwek)<=5:
